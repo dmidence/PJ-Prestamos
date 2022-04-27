@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+    <title>Simulador</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h2>
+                    Seguimiento de Pagos Segun modelo
+                </h2>
+            </div>
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+                integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            <a href="stats.html" class="col-3 align-items-center">
+                <button class="btn btn-success form-control mb-2" type="button">Regresar</button>
+            </a>
+           
+           
+
+
+            <script>
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Metodo America', 'Metodo Frances', 'Metodo Aleman'],
+                        datasets: [{
+                            label: 'Metodos',
+                            data: [12, 19, 3],
+                            backgroundColor: [
+                                'rgb(255, 99, 13)',
+                                'rgb(54, 162, 235)',
+                                'rgb(255, 206, 86)',
+                                'rgb(75, 192, 192)',
+                                'rgb(153, 102, 255)',
+                                'rgb(255, 159, 64)'
+                            ],
+                            borderColor: [
+                                'rgb(255, 99, 132, 1)',
+                                'rgb(54, 162, 235, 1)',
+                                'rgb(255, 206, 86, 1)',
+                                'rgb(75, 192, 192, 1)',
+                                'rgb(153, 102, 255, 1)',
+                                'rgb(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

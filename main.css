@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    background-image: url('./img/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body{
+    background-color: transparent;
+}
+
+canvas{
+    margin: auto;
+    max-width: 80vw;
+    max-height: 80vh;
+}
